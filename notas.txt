@@ -1,0 +1,8 @@
+- ¿Para que usarlo? 
+- ¿Por que usarlo? 
+- ¿Cuando usarlo? 
+- ¿En que situaciones deberia plantearme utilizarlo?
+- ¿Cuales son sus ventajas y desventajas?
+- Plantear una Problematica
+- Plantear una Solucion
+- Que principios (SOLID, básicos) sigue este patron?
