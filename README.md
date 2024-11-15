@@ -42,9 +42,30 @@ Los patrones de diseño son soluciones reutilizables a problemas comunes en el d
 
 ## Principios de Diseño
 
-**Encapsula lo que varia**: 
+### Encapsula lo que varia: 
 
 Identifica los aspectos de tu aplicación que varían y sepáralos de los que se mantienen inalterables.
 El objetivo principal de este principio es minimizar el efecto provocado por los cambios.
+Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Encapsula%20lo%20que%20varia)
 
-## Favorece la Composicion sobre la herencia
+### Favorece la composicion sobre la herencia
+
+- **Una subclase no puede reducir la interfaz de la superclase**: Tienes que implementar todos los métodos abstractos de la clase padre, incluso aunque no vayas a usarlos.
+
+- **Al sobrescribir métodos debes asegurarte de que el nuevo comportamiento sea compatible con el de base**.
+
+- **La herencia rompe la encapsulación de la superclase**: porque los detalles internos de la clase padre se hacen disponibles
+para la subclase.
+
+- **Las subclases estan fuertemente acopladas a superclases**.
+
+Existe una alternativa a la herencia llamada composición. Mientras que la herencia representa la relación “is a” (es un/a) entre clases (un auto es un medio de transporte), la composición se basa en la relación “tiene un/a” (un auto tiene un motor).
+Debo mencionar que este principio también se aplica a la agregación, una variante más relajada de la composición en la que un objeto puede contener una referencia al otro pero no gestiona su ciclo vital. Aquí tienes un ejemplo: un auto tiene un conductor pero éste puede utilizar otro auto o caminar sin el auto.
+
+Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Favorece%20la%20composicion%20sobre%20la%20herencia)
+
+### Programa una Interfaz no una implementacion
+Fomenta el uso de abstracciones para reducir el acoplamiento entre los componentes de un sistema.
+Este principio nos enseña a diseñar nuestros sistemas para que dependan de contratos generales (interfaz o clase abstracta) y no de detalles concretos (clases específicas). Esto hace que el código sea más flexible, reutilizable y fácil de mantener.
+
+Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Programa%20a%20una%20interfaz%20no%20una%20implementacion)
