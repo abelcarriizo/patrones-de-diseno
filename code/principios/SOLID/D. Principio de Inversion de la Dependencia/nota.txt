@@ -1,0 +1,8 @@
+El ejemplo dado es igual al principio de implementa una interfaz no una implementacion?
+
+Ambos son principios complementarios, y muchas veces su aplicación resulta muy similar, Si quisiera distinguirlos más claramente en los ejemplos, podría enfocarme en un sistema más complejo para resaltar cómo el DIP ayuda a desacoplar capas enteras de la arquitectura. Por ejemplo:
+- Una aplicación web donde una capa de controladores de alto nivel depende de servicios abstractos en lugar de interactuar directamente con repositorios concretos.
+- Una aplicación de negocio donde las reglas de negocio de alto nivel no dependen de la base de datos específica, sino de una interfaz abstracta de repositorio.
+
+"Programa a una interfaz, no a una implementación" es un concepto más específico. Este principio guía cómo diseñar clases individuales para reducir su dependencia de implementaciones concretas.
+"Inversión de la Dependencia" es un concepto más amplio que organiza cómo las clases y sus dependencias interactúan en todo el sistema. Este principio asegura que las clases de alto nivel no dependan de detalles específicos y que todo dependa de abstracciones.
