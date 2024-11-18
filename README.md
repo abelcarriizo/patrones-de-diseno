@@ -1,58 +1,80 @@
-# Patrones de Diseño
+# **Patrones de Diseño**
 
-> Antes de estudiar los patrones, puedes refrescar tu memoria repasando los términos clave de la programación orientada a objetos.
+> 💡 Antes de estudiar los patrones de diseño, te recomendamos repasar los fundamentos de la programación orientada a objetos para aprovechar al máximo esta guía.
 
-## Programación Orientada a Objetos
+---
 
-**Clase**: Es un plano que define la estructura de objetos, que son instancias de la clase.
+## **📚 Programación Orientada a Objetos**
 
-**Atributos**: Características del objeto.
+### **Conceptos básicos**
 
-**Métodos**: Comportamiento del objeto.
+- **Clase**: Un plano que define la estructura y comportamiento de los objetos.
+- **Atributos**: Las características o propiedades de un objeto.
+- **Métodos**: Las funciones que definen el comportamiento del objeto.
 
-## Pilares de la Programación Orientada a Objetos
+---
 
-**Abstracción**: Es la capacidad de representar a los objetos del mundo real en un contexto especifico.
+## **⚙️ Pilares de la Programación Orientada a Objetos**
 
-**Encapsulacion**: Capacidad de un objeto de esconder sus atributos y métodos.
+### **Abstracción**
 
-- **Privados**: Atributos o metodos que  solo pueden ser accedidos dentro de la misma clase.
-- **Protegidos**: Es un poco menos restrictivo porque los atributos o metodos ser accedidos por las subclases de una clase.
+La capacidad de representar objetos del mundo real en un contexto específico.
 
-**Herencia**: Capacidad de crear clases a partir de una existente. Tiene la ventaja de permitir la reutilización del código.
+### **Encapsulación**
 
-**Polimorfismo**: Capacidad de múltiples clases de objetos distintos de responder de formas distintas a un mismo método.
+Esconder los detalles internos de un objeto para proteger su estado y comportamiento.
 
-## ¿Qué son los patrones de diseño?
+- **Privados**: Solo accesibles dentro de la clase.
+- **Protegidos**: Accesibles dentro de la clase y sus subclases.
 
-Los patrones de diseño son soluciones reutilizables a problemas comunes en el diseño de software. Son como una receta, un plan de acción, una descripción de un problema junto con una forma de solucionarlo.
+### **Herencia**
 
-## Clasificación de patrones
+Permite crear nuevas clases a partir de otras existentes, fomentando la reutilización del código.
 
-1. **Patrones creacionales (Cómo crear cosas)**:
-    - **Formal**: Abordan la creación de objetos, evitando la necesidad de instanciar objetos directamente.
-    - **Informal**: Estos patrones son como los métodos que usan los trabajadores para crear las diferentes partes de la casa. Por ejemplo, si necesitas muchas ventanas idénticas, usarías una técnica que permita fabricarlas rápidamente y de manera eficiente.
+### **Polimorfismo**
 
-2. **Patrones estructurales (Cómo construir cosas grandes con piezas pequeñas)**:
-    - **Formal**: Estos patrones te ayudan a ensamblar objetos y clases para formar estructuras más grandes y fáciles de entender.
-    - **Informal**: Estos patrones se ocupan de cómo organizar las diferentes partes de la casa para que funcionen bien juntas. Es como decidir cómo conectar las habitaciones, puertas y ventanas para que la casa sea cómoda y eficiente.
+Habilidad de diferentes clases para responder de maneras únicas a un mismo método.
 
-3. **Patrones de comportamiento (Cómo hacer que las cosas trabajen juntas)**:
-    - **Formal**: Estos patrones se centran en la comunicación y la interacción entre objetos. Proveen soluciones para delegar responsabilidades entre los objetos y describen patrones de comunicación.
-    - **Informal**: Estos patrones son como las reglas y rutinas que seguimos dentro de la casa para mantener todo en orden. Por ejemplo, cómo usamos la calefacción, cómo se apagan las luces automáticamente cuando salimos, etc.
+---
 
-## Principios de Diseño
+## **❓ ¿Qué son los patrones de diseño?**
 
-### Principios Básicos
+Los patrones de diseño son soluciones probadas y reutilizables para problemas comunes en el diseño de software. Se pueden comparar con recetas que describen un problema, la solución y los pasos para implementarla.
 
-#### Encapsula lo que varia
+---
 
-Identifica los aspectos de tu aplicación que varían y sepáralos de los que se mantienen inalterables.
-El objetivo principal de este principio es minimizar el efecto provocado por los cambios.
+## **🗂️ Clasificación de Patrones**
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Encapsula%20lo%20que%20varia)
+### 1. **Patrones Creacionales**
 
-#### Favorece la composicion sobre la herencia
+- **Formal**: Abordan la creación de objetos, evitando instancias directas.
+- **Ejemplo**: Si necesitas fabricar muchas ventanas iguales, este patrón ayuda a producirlas eficientemente.
+
+### 2. **Patrones Estructurales**
+
+- **Formal**: Facilitan la organización y ensamblaje de objetos y clases en estructuras más grandes.
+- **Ejemplo**: Conectar habitaciones y ventanas para que tu casa sea funcional.
+
+### 3. **Patrones de Comportamiento**
+
+- **Formal**: Se centran en la comunicación e interacción entre objetos.
+- **Ejemplo**: Las reglas para apagar luces automáticamente al salir de una habitación.
+
+---
+
+## **🎯 Principios de Diseño**
+
+### **Encapsula lo que varía**
+
+Identifica y separa los aspectos que pueden cambiar de los que se mantienen constantes. Esto minimiza el impacto de los cambios en el código. El objetivo principal de este principio es minimizar el efecto provocado por los cambios.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Encapsula%20lo%20que%20varia)
+
+---
+
+### **Favorece la composición sobre la herencia**
+
+En lugar de usar la relación "es un/a", utiliza la relación "tiene un/a". Esto reduce el acoplamiento entre clases.
 
 - **Una subclase no puede reducir la interfaz de la superclase**: Tienes que implementar todos los métodos abstractos de la clase padre, incluso aunque no vayas a usarlos.
 
@@ -66,33 +88,29 @@ para la subclase.
 Existe una alternativa a la herencia llamada composición. Mientras que la herencia representa la relación “is a” (es un/a) entre clases (un auto es un medio de transporte), la composición se basa en la relación “tiene un/a” (un auto tiene un motor).
 Debo mencionar que este principio también se aplica a la agregación, una variante más relajada de la composición en la que un objeto puede contener una referencia al otro pero no gestiona su ciclo vital. Aquí tienes un ejemplo: un auto tiene un conductor pero éste puede utilizar otro auto o caminar sin el auto.
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Favorece%20la%20composicion%20sobre%20la%20herencia)
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Favorece%20la%20composicion%20sobre%20la%20herencia)
 
-#### Programa una Interfaz no una implementacion
+---
 
-Fomenta el uso de abstracciones para reducir el acoplamiento entre los componentes de un sistema.
-Este principio nos enseña a diseñar nuestros sistemas para que dependan de contratos generales (interfaz o clase abstracta) y no de detalles concretos (clases específicas). Esto hace que el código sea más flexible, reutilizable y fácil de mantener.
+### **Programa para una interfaz, no una implementación**
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Programa%20a%20una%20interfaz%20no%20una%20implementacion)
+Diseña tu código para depender de abstracciones en lugar de detalles concretos. Esto mejora la flexibilidad y el mantenimiento.
 
-### Principio SOLID
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/principios_b%C3%A1sicos/Programa%20a%20una%20interfaz%20no%20una%20implementacion)
 
-#### S: Principio de Responsabilidad Única
+---
 
-Este principio establece que una clase debe tener una sola responsabilidad o razón para cambiar. En otras palabras, una clase debe enfocarse en realizar una tarea específica y no hacerse cargo de varias responsabilidades que podrían cambiar de forma independiente.
+## **🔑 Principio SOLID**
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/S.%20Principio%20de%20Responsabilidad%20Unica)
+1. **S - Responsabilidad Única**: Una clase debe tener una sola responsabilidad o razón para cambiar. 
 
-#### O: Principio de Abierto/Cerrado
+   📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/S.%20Principio%20de%20Responsabilidad%20Unica)
 
-Las clases deben estar abiertas a la extensión pero cerradas a la modificación. Esto significa que se debe poder extender el comportamiento de una clase sin tener que modificar su código fuente, generalmente utilizando herencia o composición.
+2. **O - Abierto/Cerrado**: Las clases deben estar abiertas a la extensión pero cerradas a la modificación. Esto significa que se debe poder extender el comportamiento de una clase sin tener que modificar su código fuente, generalmente utilizando herencia o composición.
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/O.%20Principio%20de%20Abierto%20Cerrado)
+    📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/O.%20Principio%20de%20Abierto%20Cerrado)
 
-#### L: Principio de Sustitucion de Liskov
-
-Si tomamos una clase padre y la extendemos con una subclase, la subclase debe seguir comportándose como la clase original. Es decir, un objeto de la subclase debe poder reemplazar a un objeto de la superclase sin que el código que usa esa clase se rompa o funcione de manera inesperada.
-
+3. **L - Sustitución de Liskov**: Si tomamos una clase padre y la extendemos con una subclase, la subclase debe seguir comportándose como la clase original. Es decir, un objeto de la subclase debe poder reemplazar a un objeto de la superclase sin que el código que usa esa clase se rompa o funcione de manera inesperada.
 El principio de sustitución es un grupo de comprobaciones que ayudan a predecir si una subclase permanece compatible con el código que pudo funcionar con objetos de la superclase. Repasemos esta lista de detalles:
 
 - Los tipos de parámetros en el método de una subclase deben coincidir o ser más abstractos que los tipos de parámetros del método de la superclase.
@@ -101,30 +119,23 @@ El principio de sustitución es un grupo de comprobaciones que ayudan a predecir
 - Una subclase no debe fortalecer las condiciones previas.
 - Una subclase no debe debilitar las condiciones posteriores.
 - Los invariantes de una superclase deben preservarse.
-- Una subclase no debe cambiar los valores de campos privados de la superclase.
+- Una subclase no debe cambiar los valores de campos privados de la superclase.  
+  
+   📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/L.%20Principio%20de%20Sustitucion%20de%20Liskov)
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/L.%20Principio%20de%20Sustitucion%20de%20Liskov)
+1. **I - Segregación de Interfaces**: Divide interfaces grandes en interfaces más específicas para que los clientes solo implementen lo necesario.  
 
-#### I: Principio de Segregacion de la Interfaz
+   📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/I.%20Principio%20de%20Segregacion%20de%20la%20Interfaz)
 
-Intenta que tus interfaces sean lo suficientemente estrechas para que las clases del cliente no tengan que implementar comportamientos que no necesitan.
-Según el principio de segregación de la interfaz, debes desintegrar las interfaces “gruesas” hasta crear otras más detalla-
-das y específicas. Los clientes deben implementar únicamente aquellos métodos que necesitan de verdad. De lo contrario, un
-cambio en una interfaz “gruesa” descompondrá incluso clientes que no utilizan los métodos cambiados.
+2. **D - Inversión de Dependencias**: Las clases de alto nivel y bajo nivel deben depender de abstracciones.
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/I.%20Principio%20de%20Segregacion%20de%20la%20Interfaz)
+   📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/D.%20Principio%20de%20Inversion%20de%20la%20Dependencia)
 
-#### D: Principio de Inversion de Dependencia
+---
 
-Las clases de alto nivel no deben depender de clases de bajo nivel. Ambas deben depender de abstracciones. Las abstracciones no deben depender de detalles. Los detalles deben depender de abstracciones.
+## **🏭 Patrones Creacionales**
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/D.%20Principio%20de%20Inversion%20de%20la%20Dependencia)
-
-## Patrones de Diseño
-
-### Patrones Creacionales
-
-#### Factory Method
+### **Factory Method**
 
 ¿Alguna vez has ido a una tienda y notaste que para cada tipo de producto hay un empleado especializado? Por ejemplo, alguien para los lácteos, otro para las frutas, etc. Este es un tipo de “fábrica”: cada área sabe cómo crear o gestionar su propio tipo de producto.
 
@@ -132,4 +143,16 @@ El Factory Method hace algo similar. En lugar de que tu código principal (el cl
 
 Formalmente: Proporciona una interfaz para crear objetos en una superclase, pero permite que las subclases alteren el tipo de objetos que se crearán.
 
-Ejemplo: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/factory_method)
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/factory_method)
+
+---
+
+### **Abstract Factory**
+
+¿Alguna vez has armado muebles de una tienda como IKEA? Imagina que compras un juego completo de muebles, pero hay un problema: las sillas vienen de un estilo, la mesa de otro, y el sofá de otro diferente. ¡Un desastre para la decoración! Lo ideal sería que todos los muebles sean del mismo estilo, ¿verdad?
+
+Aquí entra el patrón Abstract Factory, que actúa como un catálogo. Te permite obtener familias de objetos relacionados o dependientes sin preocuparte de cómo se crean. Si eliges "Estilo Moderno", obtendrás todos los muebles modernos. Si eliges "Estilo Clásico", todo será clásico.
+
+La clave: encapsula el proceso de creación de objetos en un único lugar para asegurarte de que todo sea consistente.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/abstract_factory)
