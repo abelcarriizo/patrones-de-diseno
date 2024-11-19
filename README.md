@@ -156,3 +156,11 @@ Aquí entra el patrón Abstract Factory, que actúa como un catálogo. Te permit
 La clave: encapsula el proceso de creación de objetos en un único lugar para asegurarte de que todo sea consistente.
 
 📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/abstract_factory)
+
+---
+
+### **Builder**
+
+El patrón Builder es un patrón de diseño creacional que separa la construcción de un objeto complejo de su representación, de modo que el mismo proceso de construcción pueda crear diferentes representaciones del objeto. Es útil cuando un objeto puede configurarse de muchas maneras diferentes o tiene múltiples pasos de construcción.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/builder)
