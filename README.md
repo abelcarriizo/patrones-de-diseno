@@ -102,7 +102,7 @@ Diseña tu código para depender de abstracciones en lugar de detalles concretos
 
 ## **🔑 Principio SOLID**
 
-1. **S - Responsabilidad Única**: Una clase debe tener una sola responsabilidad o razón para cambiar. 
+1. **S - Responsabilidad Única**: Una clase debe tener una sola responsabilidad o razón para cambiar.
 
    📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/principios/SOLID/S.%20Principio%20de%20Responsabilidad%20Unica)
 
@@ -164,3 +164,60 @@ La clave: encapsula el proceso de creación de objetos en un único lugar para a
 El patrón Builder es un patrón de diseño creacional que separa la construcción de un objeto complejo de su representación, de modo que el mismo proceso de construcción pueda crear diferentes representaciones del objeto. Es útil cuando un objeto puede configurarse de muchas maneras diferentes o tiene múltiples pasos de construcción.
 
 📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/builder)
+
+---
+
+### **Singleton**
+
+El Patrón Singleton restringe la creación de instancias de una clase a una única instancia. Esto es útil en situaciones donde es importante que solo exista un objeto para coordinar acciones o mantener un estado global./home/abel/Documentos/code/patrones-de-diseño/code/patrones/Estructurales
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Creacionales/singleton)
+
+---
+
+## **🖇️ Patrones de Estructurales**
+
+### **Adapter**
+
+El Patrón Adapter es un patrón de diseño estructural que permite que clases con interfaces incompatibles trabajen juntas. Lo logra transformando la interfaz de una clase en otra que el cliente espera. Este patrón es especialmente útil cuando no puedes modificar las clases originales por restricciones de diseño, legado, o porque no tienes acceso al código fuente.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Estructurales/adapter)
+
+---
+
+## **🗣️ Patrones de Comportamiento**
+
+### **Chain of Responsibility**
+
+Chain of Responsibility es un patrón de diseño de comportamiento que permite pasar solicitudes a lo largo de la cadena de manejadores potenciales hasta que uno de ellos gestiona la solicitud.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Comportamiento/chain_of_responsibility)
+
+### **Mediator**
+
+El Patrón Mediador se utiliza para encapsular las interacciones entre un grupo de objetos. En lugar de que los objetos se comuniquen directamente entre sí, cada uno interactúa con un objeto mediador. Este mediador se encarga de manejar las comunicaciones, delegar tareas y coordinar acciones entre los componentes.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Comportamiento/mediator)
+
+### **Observer**
+
+Este patrón se usa cuando tienes un objeto principal (como un canal de YouTube) que necesita informar cambios a muchos otros objetos (los suscriptores). En lugar de que cada suscriptor pregunte constantemente al canal si hay novedades, el canal notifica automáticamente a todos cuando algo cambia.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Comportamiento/observer)
+
+### **Strategy**
+
+Strategy es un patrón de diseño que permite definir una familia de algoritmos, colocar cada uno de
+ellos en una clase separada y hacer sus objetos intercambiables.
+
+¿Has usado alguna vez una aplicación de pago en línea que te deja elegir cómo quieres pagar? Por ejemplo, puedes pagar con tarjeta de crédito, PayPal o transferencia bancaria. Todas estas son formas diferentes de realizar el mismo objetivo: procesar un pago.
+
+Pues bien, el Patrón Strategy funciona exactamente así. Este patrón permite que un objeto (llamémoslo Contexto) pueda ejecutar una acción de diferentes maneras (estrategias), dependiendo de lo que se elija en ese momento. Lo mejor es que puedes cambiar esa estrategia sin modificar el código del contexto. Es como si cambiaras de tarjeta a PayPal sin afectar la app de pagos.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Comportamiento/strategy)
+
+### **Template Method**
+
+El Patrón Template es un patron de diseño que define el esqueleto de un algoritmo en una clase base y delega la implementación de algunos pasos a subclases concretas. Este patrón es ideal para reutilizar código, ya que permite que diferentes implementaciones sigan una estructura común, evitando la duplicación.
+
+📂 **Ejemplo**: [Código](https://github.com/abelcarriizo/patrones-de-diseno/tree/main/code/patrones/Comportamiento/template)
